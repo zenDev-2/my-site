@@ -92,6 +92,7 @@ body {
   position: absolute;
   right: 28.2%;
   bottom: 26.1%;
+  transition: 0.2s all;
 }
 
 body {
@@ -227,7 +228,7 @@ nav.mobileMenu {
   right: 33.6%;
   top: 2.5%;
   animation: fadeIn 0.5s 2.3s ease-in forwards; // 2.1s
-  z-index: 5;
+  z-index: -1;
 }
 
 .eye {
@@ -247,7 +248,7 @@ nav.mobileMenu {
   width: 3.05rem;
   border-radius: 50%;
   border: 10px solid #242424;
-  background-color: #fff;
+  // background-color: #fff;
   animation: movePupil 5s ease infinite 1s;
 }
 
@@ -267,5 +268,5 @@ nav.mobileMenu {
   height: 25%;
   background-color: #7fb5fb;
   border-radius: 0 0 60% 60%;
-  animation: blink 3.2s 3.2s linear;
+  animation: blink 2.8s 3.2s linear;
 }

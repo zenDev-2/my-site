@@ -33,3 +33,28 @@ mobileMenu_btn.addEventListener("click", () => {
     symbol_mid.classList.add("add-symbols");
   }
 });
+
+// Handles pupil color when eyelid
+
+const blDot = document.querySelector(".blDot");
+const whDot = document.querySelector(".whDot");
+const ball = document.querySelector(".ball");
+
+const lidDrop = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    whDot.style.opacity = 0;
+    ball.style.backgroundColor = "#000";
+    blDot.style.opacity = 0;
+    resolve("#fff");
+  }, 3200);
+});
+
+const shiftColor = async function () {
+  const pupilColor = await lidDrop;
+  setTimeout(() => {
+    whDot.style.opacity = 1;
+    whDot.style.backgroundColor = pupilColor;
+  }, 400);
+};
+
+shiftColor();
