@@ -29,9 +29,28 @@ button {
 @include animations.kf-fadeIn(fadeIn);
 @include animations.kf-fadeOut(fadeOut);
 @include animations.kf-twirl(twirl);
-@include animations.kf-shimmyBl(shimmyBl);
-@include animations.kf-shimmyWh(shimmyWh);
+@include animations.kf-shimmyBl(shimmyBl, 1, 0);
+@include animations.kf-shimmyWh(shimmyWh, 1, 0);
 @include animations.kf-symbolOpen(symbolOpen);
+@media (min-width: 899px) {
+  @include animations.kf-shimmyBl(shimmyBl, 1, 1);
+  @include animations.kf-shimmyWh(shimmyWh, 1, 1);
+  .blDot {
+    animation: shimmyBl 1.8s 0.4s ease-in-out forwards;
+  }
+  .whDot {
+    animation: shimmyWh 1.8s 0.4s ease-in-out forwards;
+  }
+  .title {
+    animation: fadeIn 0.5s 3.3s ease-in forwards;
+  }
+  .tagline {
+    animation: fadeIn 0.5s 3.6s ease-in forwards;
+  }
+  .mobileMenu--btn {
+    animation: fadeIn 0.5s 4s ease-in forwards;
+  }
+}
 
 // vars
 $blue: #046ef9;
@@ -124,19 +143,19 @@ body {
     font-weight: 500;
     font-size: clamp(2.5rem, 8vw, 4rem);
     margin: 0;
-    animation: fadeIn 0.5s 3.3s ease-in forwards;
+    animation: fadeIn 0.5s 2.8s ease-in forwards;
   }
   .tagline {
     font-family: "Nunito Sans", sans-serif;
     font-weight: 200;
     font-size: clamp(1.3rem, 3vw, 1.7rem);
     margin: 0.5rem 0 1.5rem 0;
-    animation: fadeIn 0.5s 3.6s ease-in forwards;
+    animation: fadeIn 0.5s 3.4s ease-in forwards;
   }
 
   .mobileMenu--btn {
     opacity: 0;
-    animation: fadeIn 0.5s 4s ease-in forwards;
+    animation: fadeIn 0.5s 3.8s ease-in forwards;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -227,7 +246,7 @@ nav.mobileMenu {
   position: absolute;
   right: 33.6%;
   top: 2.5%;
-  animation: fadeIn 0.5s 2.3s ease-in forwards; // 2.1s
+  animation: fadeIn 0.25s 2.1s ease-in forwards; // 2.1s
   z-index: -1;
 }
 
@@ -248,7 +267,7 @@ nav.mobileMenu {
   width: 3.05rem;
   border-radius: 50%;
   border: 10px solid #242424;
-  // background-color: #fff;
+  background-color: #fff;
   animation: movePupil 5s ease infinite 1s;
 }
 
@@ -268,5 +287,5 @@ nav.mobileMenu {
   height: 25%;
   background-color: #7fb5fb;
   border-radius: 0 0 60% 60%;
-  animation: blink 2.8s 3.2s linear;
+  animation: blink 2.8s 2.8s linear;
 }

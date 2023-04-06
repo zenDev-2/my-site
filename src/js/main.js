@@ -40,21 +40,21 @@ const blDot = document.querySelector(".blDot");
 const whDot = document.querySelector(".whDot");
 const ball = document.querySelector(".ball");
 
-const lidDrop = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    whDot.style.opacity = 0;
-    ball.style.backgroundColor = "#242424";
-    blDot.style.opacity = 0;
-    resolve("#fff");
-  }, 3200);
-});
+// const lidDrop = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     whDot.style.opacity = 0;
+//     ball.style.backgroundColor = "#242424";
+//     blDot.style.opacity = 0;
+//     resolve("#fff");
+//   }, 3200);
+// });
 
-const shiftColor = async function () {
-  const pupilColor = await lidDrop;
-  setTimeout(() => {
-    whDot.style.opacity = 1;
-    whDot.style.backgroundColor = pupilColor;
-  }, 400);
-};
+// const shiftColor = async function () {
+//   const pupilColor = await lidDrop;
+//   setTimeout(() => {
+//     whDot.style.opacity = 1;
+//     whDot.style.backgroundColor = pupilColor;
+//   }, 400);
+// };
 
-shiftColor();
+// shiftColor();

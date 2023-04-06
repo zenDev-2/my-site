@@ -31,7 +31,7 @@
 }
 
 // Shimmy Blue
-@mixin kf-shimmyBl($shimmyBl) {
+@mixin kf-shimmyBl($shimmyBl, $opacity1, $opacity2) {
   @keyframes #{$shimmyBl} {
     50% {
       right: -10%;
@@ -39,16 +39,20 @@
     75% {
       right: -10%;
     }
+    88% {
+      opacity: $opacity1;
+    }
     100% {
       right: 27%;
       top: 26%;
       z-index: 1;
+      opacity: $opacity2;
     }
   }
 }
 
 // Shimmy White
-@mixin kf-shimmyWh($shimmyWh) {
+@mixin kf-shimmyWh($shimmyWh, $opacity1, $opacity2) {
   @keyframes #{$shimmyWh} {
     50% {
       right: 63%;
@@ -56,10 +60,14 @@
     75% {
       right: 63%;
     }
+    88% {
+      opacity: $opacity1;
+    }
     100% {
       right: 27%;
       top: 26%;
       z-index: 3;
+      opacity: $opacity2;
     }
   }
 }
