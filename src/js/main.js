@@ -43,7 +43,7 @@ const ball = document.querySelector(".ball");
 const lidDrop = new Promise((resolve, reject) => {
   setTimeout(() => {
     whDot.style.opacity = 0;
-    ball.style.backgroundColor = "#000";
+    ball.style.backgroundColor = "#242424";
     blDot.style.opacity = 0;
     resolve("#fff");
   }, 3200);
