@@ -99,6 +99,16 @@
   }
 }
 
+// grow font-size on menu open
+@mixin kf-growFont($growFont) {
+  @keyframes #{$growFont} {
+    100% {
+      opacity: 1;
+      font-size: 1.4rem;
+    }
+  }
+}
+
 // @keyframes movePupil {
 //   0% {
 //     transform: translateX(0px) translateY(0px);
