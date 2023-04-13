@@ -254,22 +254,23 @@ nav.mobileMenu {
       margin-right: 1.3rem;
     }
 
-    .page-links {
-      font-size: 0.3rem;
-    }
+    // .page-links {
+    //   font-size: 3rem;
+    // }
 
     .projects-li {
-      animation: growFont 0.5s ease-in-out forwards;
+      animation: fadeIn 0.5s ease-in-out forwards;
     }
     .media-li {
-      animation: growFont 0.5s 0.2s ease-in-out forwards;
+      animation: fadeIn 0.5s 0.2s ease-in-out forwards;
     }
     .about-li {
-      animation: growFont 0.5s 0.5s ease-in-out forwards;
+      animation: fadeIn 0.5s 0.5s ease-in-out forwards;
     }
 
     .listItem {
       opacity: 0;
+      font-size: 1.4rem;
     }
 
     .listItem + .listItem {
